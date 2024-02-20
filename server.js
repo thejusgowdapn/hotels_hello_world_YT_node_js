@@ -20,7 +20,10 @@ app.use('/person',personRoutes)
 const menuRoutes = require('./routes/menuRoutes')
 app.use('/menu',menuRoutes)
 
-app.listen(3000,()=>{
+
+const PORT = process.env.PORT || 3000
+
+app.listen(PORT,()=>{
     console.log('server is listining on 3000')
 })
 
