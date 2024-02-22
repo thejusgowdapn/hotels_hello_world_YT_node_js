@@ -16,9 +16,9 @@ router.post('/', async (req,res)=>{
       res.status(200).json(response) 
   
     }catch(err){
-          console.log('------------------------------------------------------------------------------------------')
+         
           console.log(err);
-          console.log('------------------------------------------------------------------------------------------')
+         
           res.status(500).json({error:'Internal server error'})
     }
     
@@ -31,7 +31,7 @@ router.post('/', async (req,res)=>{
       const workType = req.params.workType
       if(workType== 'chef' || workType=='manager' || workType=='waiter'){
           const response = await Person.find({work: workType})
-          console.log(response)
+          console.log('data fetched')
           res.status(200).json(response)
       }else{
         res.status(404).json({error:'Invalid role'})
