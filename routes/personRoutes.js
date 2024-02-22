@@ -4,7 +4,7 @@ const router = express.Router()
 const Person = require("../models/Person")
 
 
-router.post('/', async (req,res)=>{
+router.post('/signup', async (req,res)=>{
     try{
       const data = req.body // assuming the request body contains person data
       
